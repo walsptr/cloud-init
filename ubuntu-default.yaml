@@ -1,0 +1,18 @@
+#cloud-config
+
+hostname: ubuntu-server
+
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: sudo
+    shell: /bin/bash
+    lock_passwd: false
+    passwd: "$6$GcsUGsTVqjhDclHg$RzMEEL8J4RqFDWi5AdRvHY89A7E2KYiccfKUL31Thop57MORX56q30XT.fm0Y5Dv3xyzdPwWC5esx2xcYnCoD."
+
+ssh_pwauth: true
+
+disable_root: false
+
+chpasswd:
+  expire: false
